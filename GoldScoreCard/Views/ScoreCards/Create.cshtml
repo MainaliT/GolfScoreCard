@@ -1,0 +1,120 @@
+﻿@model GoldScoreCard.Models.ScoreCard
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{ 
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+        <h4>ScoreCard</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.PlayerName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PlayerName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PlayerName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+       <div class="form-group">
+        @Html.LabelFor(model => model.Tees, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("Tees", "Select Tee's")         
+             @Html.ValidationMessageFor(model => model.Tees, "", new { @class = "text-danger" })
+         </div>
+        </div>
+
+    @*   <div class="form-group">
+         @Html.LabelFor(model => model.holeOne, htmlAttributes: new { @class = "control-label col-md-2" })
+         <div class="col-md-10">
+             @Html.EditorFor(model => model.holeOne, new { htmlAttributes = new { @class = "form-control" } })
+             @Html.ValidationMessageFor(model => model.holeOne, "", new { @class = "text-danger" })
+         </div>
+     </div>
+
+     <div class="form-group">
+         @Html.LabelFor(model => model.holeTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+         <div class="col-md-10">
+             @Html.EditorFor(model => model.holeTwo, new { htmlAttributes = new { @class = "form-control" } })
+             @Html.ValidationMessageFor(model => model.holeTwo, "", new { @class = "text-danger" })
+         </div>
+     </div>
+
+     <div class="form-group">
+         @Html.LabelFor(model => model.holeThree, htmlAttributes: new { @class = "control-label col-md-2" })
+         <div class="col-md-10">
+             @Html.EditorFor(model => model.holeThree, new { htmlAttributes = new { @class = "form-control" } })
+             @Html.ValidationMessageFor(model => model.holeThree, "", new { @class = "text-danger" })
+         </div>
+     </div>
+
+     <div class="form-group">
+         @Html.LabelFor(model => model.holeFour, htmlAttributes: new { @class = "control-label col-md-2" })
+         <div class="col-md-10">
+             @Html.EditorFor(model => model.holeFour, new { htmlAttributes = new { @class = "form-control" } })
+             @Html.ValidationMessageFor(model => model.holeFour, "", new { @class = "text-danger" })
+         </div>
+     </div>
+
+     <div class="form-group">
+         @Html.LabelFor(model => model.holeFive, htmlAttributes: new { @class = "control-label col-md-2" })
+         <div class="col-md-10">
+             @Html.EditorFor(model => model.holeFive, new { htmlAttributes = new { @class = "form-control" } })
+             @Html.ValidationMessageFor(model => model.holeFive, "", new { @class = "text-danger" })
+         </div>
+     </div>
+
+     <div class="form-group">
+         @Html.LabelFor(model => model.holeSix, htmlAttributes: new { @class = "control-label col-md-2" })
+         <div class="col-md-10">
+             @Html.EditorFor(model => model.holeSix, new { htmlAttributes = new { @class = "form-control" } })
+             @Html.ValidationMessageFor(model => model.holeSix, "", new { @class = "text-danger" })
+         </div>
+     </div>
+
+     <div class="form-group">
+         @Html.LabelFor(model => model.holeSeven, htmlAttributes: new { @class = "control-label col-md-2" })
+         <div class="col-md-10">
+             @Html.EditorFor(model => model.holeSeven, new { htmlAttributes = new { @class = "form-control" } })
+             @Html.ValidationMessageFor(model => model.holeSeven, "", new { @class = "text-danger" })
+         </div>
+     </div>
+
+     <div class="form-group">
+         @Html.LabelFor(model => model.holeEight, htmlAttributes: new { @class = "control-label col-md-2" })
+         <div class="col-md-10">
+             @Html.EditorFor(model => model.holeEight, new { htmlAttributes = new { @class = "form-control" } })
+             @Html.ValidationMessageFor(model => model.holeEight, "", new { @class = "text-danger" })
+         </div>
+     </div>
+
+     <div class="form-group">
+         @Html.LabelFor(model => model.holeNine, htmlAttributes: new { @class = "control-label col-md-2" })
+         <div class="col-md-10">
+          @Html.EditorFor(model => model.holeNine, new { htmlAttributes = new { @class = "form-control" } })
+             @Html.ValidationMessageFor(model => model.holeNine, "", new { @class = "text-danger" })
+         </div>
+     </div>
+        *@ 
+    
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

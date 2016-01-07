@@ -1,0 +1,115 @@
+﻿@model GoldScoreCard.Models.ScoreCard
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <h2>Details</h2>
+
+    <div>
+        
+        <hr />
+        <h4>ScoreCard</h4>
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PlayerName):&nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PlayerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Tees): &nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tees)
+            </dd>
+
+            <dt>
+                Hole One :&nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.holeOne)
+            </dd>
+            <dt>
+                Hole Two: &nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.holeTwo)
+            </dd>
+
+            <dt>
+                Hole Three :&nbsp;&nbsp;&nbsp;
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.holeThree)
+            </dd>
+
+            <dt>
+                Hole Four: &nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.holeFour)
+            </dd>
+
+            <dt>
+                Hole Five : &nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.holeFive)
+            </dd>
+
+            <dt>
+                Hole Six  :&nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.holeSix)
+            </dd>
+
+            <dt>
+                Hole Seven  :&nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.holeSeven)
+
+            <dt>
+                Hole Eight :&nbsp;&nbsp;&nbsp; 
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.holeEight)
+            </dd>
+
+            <dt>
+                Hole Nine :&nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.holeNine)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Total) :&nbsp;&nbsp;&nbsp;
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Total)
+            </dd>
+
+        </dl>
+    </div>
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
